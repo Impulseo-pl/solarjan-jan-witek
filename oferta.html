@@ -5,19 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Oferta &mdash; fotowoltaika, magazyny energii, elektryka | Solarjan Olesno</title>
 <meta name="description" content="Zakres prac: fotowoltaika na dachu i gruncie, magazyny energii, instalacje elektryczne, pomiary z protokolem, monitoring, spawanie swiatlowodow. Olesno i powiat oleski.">
-<meta name="theme-color" content="#06090F">
+<meta name="theme-color" content="#0C0C0D">
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-<div class="bg-grid" aria-hidden="true"></div>
-<canvas id="grid-canvas" aria-hidden="true"></canvas>
-<div class="aura aura--a" aria-hidden="true"></div>
-<div class="aura aura--b" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 
 <header class="nav">
   <div class="wrap">
@@ -48,7 +45,7 @@
   </div>
 </section>
 <section style="padding-top:0"><div class="wrap"><div class="cards">
-      <article class="card" id="fotowoltaika" data-rv="0" style="scroll-margin-top:110px">
+      <article class="card" id="fotowoltaika" data-no="01" data-rv="0" style="scroll-margin-top:110px">
         <h3>Fotowoltaika</h3>
         <p>Dobieramy moc instalacji pod realne zu&#380;ycie pr&#261;du w budynku &mdash; nie pod cennik. Stawiamy konstrukcj&#281; i uk&#322;adamy modu&#322;y na dachu albo na gruncie.</p>
         <ul><li>ogl&#281;dziny dachu i sprawdzenie po&#322;aci</li><li>dob&#243;r mocy z rachunku za pr&#261;d</li><li>konstrukcja pod blachodach&#243;wk&#281;, karpi&#243;wk&#281;, dach p&#322;aski i grunt</li><li>monta&#380; modu&#322;&#243;w i falownika</li><li>trasy kablowe poprowadzone tak, &#380;eby nie szpeci&#322;y elewacji</li><li>zg&#322;oszenie instalacji do operatora sieci</li></ul>
@@ -56,7 +53,7 @@
         <a class="card-link" href="tel:+48535276508">Zapytaj o wycen&#281; <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
 
-      <article class="card" id="magazyny" data-rv="0" style="scroll-margin-top:110px">
+      <article class="card" id="magazyny" data-no="02" data-rv="0" style="scroll-margin-top:110px">
         <h3>Magazyny energii</h3>
         <p>Falownik hybrydowy z magazynem odk&#322;ada nadwy&#380;k&#281; z dnia na wiecz&#243;r, zamiast oddawa&#263; j&#261; do sieci za u&#322;amek ceny.</p>
         <ul><li>dob&#243;r pojemno&#347;ci pod Twoje zu&#380;ycie wieczorne</li><li>falownik hybrydowy do nowej instalacji</li><li>rozbudowa istniej&#261;cej fotowoltaiki o magazyn</li><li>konfiguracja pracy przy zaniku napi&#281;cia w sieci</li><li>podgl&#261;d produkcji i zu&#380;ycia w aplikacji</li></ul>
@@ -64,7 +61,7 @@
         <a class="card-link" href="tel:+48535276508">Zapytaj o wycen&#281; <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
 
-      <article class="card" id="elektryka" data-rv="0" style="scroll-margin-top:110px">
+      <article class="card" id="elektryka" data-no="03" data-rv="0" style="scroll-margin-top:110px">
         <h3>Instalacje elektryczne</h3>
         <p>Rozprowadzamy instalacj&#281; w nowym domu i modernizujemy star&#261;. Robimy to, co przy fotowoltaice i tak trzeba ruszy&#263;.</p>
         <ul><li>instalacja w domu w budowie</li><li>wymiana starej tablicy na rozdzielnic&#281; z opisanymi obwodami</li><li>r&#243;&#380;nicówki i zabezpieczenia przepi&#281;ciowe</li><li>obw&#243;d pod pomp&#281; ciep&#322;a albo &#322;adowark&#281; do auta</li><li>osprz&#281;t, o&#347;wietlenie, gniazda</li></ul>
@@ -72,7 +69,7 @@
         <a class="card-link" href="tel:+48535276508">Zapytaj o wycen&#281; <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
 
-      <article class="card" id="pomiary" data-rv="0" style="scroll-margin-top:110px">
+      <article class="card" id="pomiary" data-no="04" data-rv="0" style="scroll-margin-top:110px">
         <h3>Przegl&#261;dy i pomiary</h3>
         <p>Mierzymy instalacj&#281; i wystawiamy protok&#243;&#322; &mdash; do odbioru budynku, do ubezpieczyciela albo dla w&#322;asnego spokoju.</p>
         <ul><li>pomiary odbiorcze po nowej instalacji</li><li>pomiary okresowe w budynkach u&#380;ytkowanych</li><li>skuteczno&#347;&#263; ochrony przeciwpora&#380;eniowej</li><li>rezystancja izolacji obwod&#243;w</li><li>protok&#243;&#322; w formie papierowej, do teczki budynku</li></ul>
@@ -80,7 +77,7 @@
         <a class="card-link" href="tel:+48535276508">Zapytaj o wycen&#281; <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
 
-      <article class="card" id="monitoring" data-rv="0" style="scroll-margin-top:110px">
+      <article class="card" id="monitoring" data-no="05" data-rv="0" style="scroll-margin-top:110px">
         <h3>Monitoring</h3>
         <p>Kamery ustawiamy tak, &#380;eby pokrywa&#322;y wjazd, drzwi i podw&#243;rko bez martwych p&#243;l. Podgl&#261;d masz na telefonie.</p>
         <ul><li>dob&#243;r punkt&#243;w kamerowych na miejscu</li><li>okablowanie i rejestrator</li><li>konfiguracja podgl&#261;du zdalnego</li><li>rozbudowa istniej&#261;cego zestawu</li></ul>
@@ -88,7 +85,7 @@
         <a class="card-link" href="tel:+48535276508">Zapytaj o wycen&#281; <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
 
-      <article class="card" id="swiatlowody" data-rv="0" style="scroll-margin-top:110px">
+      <article class="card" id="swiatlowody" data-no="06" data-rv="0" style="scroll-margin-top:110px">
         <h3>Spawanie &#347;wiat&#322;owod&#243;w</h3>
         <p>Spawamy i zakańczamy w&#322;&#243;kna: przy&#322;&#261;cza, przed&#322;u&#380;enia trasy, naprawy po uszkodzonym kablu.</p>
         <ul><li>przy&#322;&#261;cze &#347;wiat&#322;owodowe do budynku</li><li>naprawa przerwanej trasy po robotach ziemnych</li><li>przed&#322;u&#380;enie istniej&#261;cego odcinka</li><li>zako&#324;czenie i sprawdzenie w&#322;&#243;kien</li></ul>
