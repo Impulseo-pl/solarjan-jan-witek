@@ -1,118 +1,177 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kontakt - Solarjan Jan Witek</title>
-<meta name="description" content="Kontakt Solarjan Jan Witek - Olesno, opolskie">
-<link rel="canonical" href="https://kris20032.github.io/solarjan-jan-witek/kontakt.html">
-<meta name="robots" content="noindex, nofollow">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="pl_PL">
-<meta property="og:site_name" content="Solarjan Jan Witek">
-<meta property="og:title" content="Kontakt - Solarjan Jan Witek">
-<meta property="og:description" content="Kontakt Solarjan Jan Witek - Olesno, opolskie">
-<meta property="og:url" content="https://kris20032.github.io/solarjan-jan-witek/kontakt.html">
-<meta property="og:image" content="https://kris20032.github.io/solarjan-jan-witek/img/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kontakt &mdash; Solarjan Jan Witek | Olesno, 535 276 508</title>
+<meta name="description" content="Zadzwon: 535 276 508 albo zostaw numer - oddzwonimy. Fotowoltaika, magazyny energii i elektryka. Olesno i powiat oleski.">
+<meta name="theme-color" content="#06090F">
+<link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=295d6cc1">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
+<div class="bg-grid" aria-hidden="true"></div>
+<canvas id="grid-canvas" aria-hidden="true"></canvas>
+<div class="aura aura--a" aria-hidden="true"></div>
+<div class="aura aura--b" aria-hidden="true"></div>
+
 <header class="nav">
-  <div class="wrap nav-inner">
-    <a class="brand brand-has-logo" href="index.html"><img class="brand-logo" src="img/logo.png" alt="Solarjan Jan Witek" width="2012" height="1615" decoding="async"></a>
-    <nav class="nav-links">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Solarjan Jan Witek - strona glowna">
+      <img src="img/logo.png" alt="Solarjan" width="60" height="40">
+      <span><b>Solarjan</b><small>Fotowoltaika</small></span>
+    </a>
+    <nav class="nav-links" id="menu">
+      <a href="index.html#kalkulator">Kalkulator</a>
       <a href="oferta.html">Oferta</a>
       <a href="realizacje.html">Realizacje</a>
-      <a href="o-nas.html">O nas</a>
-      <a href="kontakt.html" class="active" aria-current="page">Kontakt</a>
-      <a href="tel:+48535276508" class="btn btn-accent">Zadzwoń +48 535 276 508</a>
+      <a href="o-nas.html">O nas</a>
+      <a href="kontakt.html" aria-current="page">Kontakt</a>
     </nav>
-    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a class="nav-tel" href="tel:+48535276508"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> 535 276 508</a>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span></button>
   </div>
 </header>
 
 <main>
-<section class="pagehead">
-  <img src="img/g9.jpg" alt="Solarjan Jan Witek - Zapytaj o wycenę" width="1600" height="1067" decoding="async">
+
+<section class="phead">
   <div class="wrap">
-    <span class="eyebrow">Kontakt</span>
-    <h1>Zapytaj o wycenę</h1>
-    <p>Odpowiemy na pytania i przygotujemy wycenę.</p>
+    <div class="crumbs"><a href="index.html">Strona g&#322;&#243;wna</a> <span>/</span> <span>Kontakt</span></div>
+    <span class="eyebrow">Odezwij si&#281;</span>
+    <h1>Najszybciej za&#322;atwimy to przez telefon</h1>
+    <p class="lead">Jeden telefon wystarczy, &#380;eby&#347; wiedzia&#322;, czy to ma sens i ile b&#281;dzie kosztowa&#263;. Je&#347;li wolisz &mdash; zostaw numer, oddzwonimy.</p>
   </div>
 </section>
-<section>
-  <div class="wrap contact-grid">
-    <div class="reveal">
-      <span class="eyebrow">Dane kontaktowe</span>
-      <h2 style="margin:var(--space-4) 0 var(--space-6)">Solarjan Jan Witek</h2>
-      <div class="info-list">
-        <div class="info-row"><div class="ic"><svg class="ico-tel" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" fill="currentColor"/></svg></div><div><div class="lbl">Telefon</div><a class="val" href="tel:+48535276508">+48 535 276 508</a></div></div>
-        <div class="info-row"><div class="ic"><svg class="ico-mail" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.2" y="5.5" width="17.6" height="13" rx="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="lbl">E-mail</div><a class="val" href="mailto:jan@solarjan.pl">jan@solarjan.pl</a></div></div>
-        <div class="info-row"><div class="ic"><svg class="ico-pin" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="12" cy="9.5" r="2.4" fill="currentColor"/></svg></div><div><div class="lbl">Adres</div><div class="val">Olesno, opolskie</div></div></div>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="contact-grid" data-rv="0">
+      <a class="ct" href="tel:+48535276508">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <small>Telefon</small>
+        <b>+48 535 276 508</b>
+        <span>Najszybsza droga &mdash; od razu powiemy, czy to nasz teren.</span>
+      </a>
+      <a class="ct" href="mailto:jan@solarjan.pl">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6 10-6"/></svg>
+        <small>E-mail</small>
+        <b>jan@solarjan.pl</b>
+        <span>Wy&#347;lij zdj&#281;cie dachu i rachunek &mdash; odpiszemy z wst&#281;pn&#261; kalkulacj&#261;.</span>
+      </a>
+      <div class="ct">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4.5 8-12a8 8 0 1 0-16 0c0 7.5 8 12 8 12z"/><circle cx="12" cy="10" r="3"/></svg>
+        <small>Obszar</small>
+        <b>Olesno i powiat oleski</b>
+        <span>Dalsze wyjazdy do uzgodnienia przy wycenie.</span>
       </div>
     </div>
-    <div class="reveal">
-      <form class="form" action="https://formsubmit.co/jan@solarjan.pl" method="POST">
-        <input type="hidden" name="_subject" value="Zapytanie ze strony Solarjan Jan Witek">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <div class="fld"><label for="name">Imię / firma</label><input id="name" name="name" type="text" placeholder="np. Jan Kowalski" required></div>
-        <div class="fld"><label for="email">E-mail</label><input id="email" name="email" type="email" placeholder="adres@email.pl" required></div>
-        <div class="fld"><label for="phone">Telefon</label><input id="phone" name="phone" type="tel" placeholder="+48 ..."></div>
-        <div class="fld"><label for="msg">Czego dotyczy zapytanie?</label><textarea id="msg" name="message" placeholder="Napisz krótko, w czym możemy pomóc" required></textarea></div>
-        <button type="submit" class="btn btn-accent" style="width:100%;justify-content:center">Wyślij zapytanie <span class="arr">→</span></button>
-        <p class="note">Wiadomość trafi bezpośrednio do nas. Można też zadzwonić: +48 535 276 508.</p>
-      </form>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="calc" data-rv="0">
+      <div class="calc-in">
+        <h3>Zostaw numer &mdash; oddzwonimy</h3>
+        <p class="calc-note">Wype&#322;nij kr&#243;tko. Im wi&#281;cej napiszesz o budynku, tym konkretniej oddzwonimy.</p>
+        <form class="form" id="kontakt-form" style="margin-top:26px">
+          <div class="form-row">
+            <label>Imi&#281;<input type="text" name="imie" required placeholder="Jan"></label>
+            <label>Telefon<input type="tel" name="tel" required placeholder="600 000 000"></label>
+          </div>
+          <label>Czego dotyczy
+            <select name="zakres">
+              <option>Fotowoltaika</option>
+              <option>Magazyn energii</option>
+              <option>Instalacja elektryczna</option>
+              <option>Pomiary i protok&#243;&#322;</option>
+              <option>Monitoring</option>
+              <option>&#346;wiat&#322;ow&#243;d</option>
+            </select>
+          </label>
+          <label>Miesi&#281;czny rachunek za pr&#261;d (opcjonalnie)<input type="text" name="rachunek" placeholder="np. 450 z&#322;"></label>
+          <label>Co chcesz zrobi&#263;<textarea name="wiadomosc" placeholder="Dach blachodach&#243;wka, po&#322;udniowa strona, dom 140 m2, rachunek ok. 400 z&#322; miesi&#281;cznie."></textarea></label>
+          <button class="btn btn--pri btn--block" type="submit">Wy&#347;lij i poprosz&#281; o telefon</button>
+          <p class="form-note">Formularz otwiera Tw&#243;j program pocztowy z gotow&#261; tre&#347;ci&#261;. Je&#347;li wolisz nie pisa&#263; &mdash; po prostu zadzwo&#324; pod 535 276 508.</p>
+        </form>
+        <p id="form-ok" hidden class="form-note" style="color:var(--amber)">Otwieramy program pocztowy z Twoj&#261; wiadomo&#347;ci&#261;.</p>
+      </div>
+      <div class="calc-out">
+        <div class="calc-hero-lbl">Co b&#281;dzie dalej</div>
+        <div class="steps" style="margin-top:8px">
+          <div class="step lit"><div class="step-no">01</div><div><h3 style="font-size:18px">Oddzwaniamy</h3><p style="font-size:14.5px">Pytamy o rachunek, dach i to, co chcesz osi&#261;gn&#261;&#263;. Kilka minut rozmowy.</p></div></div>
+          <div class="step lit"><div class="step-no">02</div><div><h3 style="font-size:18px">Umawiamy ogl&#281;dziny</h3><p style="font-size:14.5px">Przyje&#380;d&#380;amy zobaczy&#263; budynek. Dojazd i wycena nic nie kosztuj&#261;.</p></div></div>
+          <div class="step lit"><div class="step-no">03</div><div><h3 style="font-size:18px">Dostajesz cen&#281;</h3><p style="font-size:14.5px">Jedna kwota za ca&#322;o&#347;&#263; i termin. Decyzj&#281; podejmujesz na spokojnie.</p></div></div>
+        </div>
+        <p class="calc-foot">Solarjan Jan Witek &middot; Olesno, powiat oleski &middot; <a href="https://www.google.com/maps/place/Solarjan+Jan+Witek/@50.8746862,18.414472,4638m/data=!3m1!1e3" target="_blank" rel="noopener" style="color:var(--amber)">zobacz wizyt&#243;wk&#281; Google</a></p>
+      </div>
     </div>
   </div>
 </section>
-<section style="padding-top:0">
-  <div class="wrap reveal">
-    <iframe class="map" title="Solarjan Jan Witek - Olesno" src="https://maps.google.com/maps?q=50.8746862%2C18.414472&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<section>
+  <div class="wrap">
+    <div class="cta-final" data-rv="0">
+      <span class="eyebrow" style="justify-content:center">Wycena za darmo</span>
+      <h2>Powiedz, co masz na dachu &mdash; policzymy resztę</h2>
+      <p class="lead">Jeden telefon, przyjazd na ogl&#281;dziny i konkretna cena. Wycena nic nie kosztuje i do niczego nie zobowi&#261;zuje.</p>
+      <a class="cta-tel" href="tel:+48535276508">+48 535 276 508</a>
+      <div class="cta-final-btns">
+        <a class="btn btn--pri" href="tel:+48535276508">Zadzwo&#324; teraz</a>
+        <a class="btn btn--ghost" href="kontakt.html">Zostaw numer &mdash; oddzwonimy</a>
+      </div>
+    </div>
   </div>
 </section>
+
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <div class="name">Solarjan Jan Witek</div>
-        <p>Montujemy panele na dachu i na gruncie, dokładamy magazyn energii i wpinamy całość w instalację budynku.</p>
+    <div class="foot">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="img/logo.png" alt="Solarjan" width="60" height="40">
+          <span><b>Solarjan</b><small>Fotowoltaika</small></span>
+        </a>
+        <p>Solarjan Jan Witek &mdash; fotowoltaika, magazyny energii i instalacje elektryczne. Olesno i powiat oleski.</p>
       </div>
-      <div class="foot-col">
-        <h4>Nawigacja</h4>
-        <a href="oferta.html">Oferta</a>
-        <a href="realizacje.html">Realizacje</a>
-        <a href="o-nas.html">O nas</a>
-        <a href="kontakt.html">Kontakt</a>
+      <div>
+        <h4>Strona</h4>
+        <ul>
+          <li><a href="oferta.html">Oferta</a></li>
+          <li><a href="realizacje.html">Realizacje</a></li>
+          <li><a href="o-nas.html">O nas</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="index.html#kalkulator">Kalkulator oszcz&#281;dno&#347;ci</a></li>
+        </ul>
       </div>
-      <div class="foot-col">
+      <div>
         <h4>Kontakt</h4>
-        <a href="tel:+48535276508">+48 535 276 508</a>
-        <a href="mailto:jan@solarjan.pl">jan@solarjan.pl</a>
-        <p>Olesno, opolskie</p>
-      <div class="foot-soc">
-        <a class="soc" href="https://www.facebook.com/p/Solarjan-Jan-Witek-100083001147476/" target="_blank" rel="noopener" aria-label="Facebook - Solarjan Jan Witek"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" fill="currentColor"/></svg></a>
-        <a class="soc" href="https://www.google.com/maps/place/Solarjan+Jan+Witek/@50.8746862,18.414472,4638m/data=!3m1!1e3!4m6!3m5!1s0x6fb334b5c54884ab:0x35dd14c9100cd678!8m2!3d50.8760019!4d18.4130481!16s%2Fg%2F11ssd45byc" target="_blank" rel="noopener" aria-label="Google - Solarjan Jan Witek"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" fill="currentColor"/></svg></a>
-      </div>
+        <ul>
+          <li><a href="tel:+48535276508">+48 535 276 508</a></li>
+          <li><a href="mailto:jan@solarjan.pl">jan@solarjan.pl</a></li>
+          <li><a href="https://www.facebook.com/p/Solarjan-Jan-Witek-100083001147476/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.google.com/maps/place/Solarjan+Jan+Witek/@50.8746862,18.414472,4638m/data=!3m1!1e3" target="_blank" rel="noopener">Wizyt&#243;wka Google</a></li>
+        </ul>
       </div>
     </div>
-    <div class="foot-bot">
-      <span>© 2026 Solarjan Jan Witek</span>
-      <span>Projekt strony: <a class="foot-credit" href="https://impulseo.pl" target="_blank" rel="noopener">Impulseo</a></span>
+    <div class="foot-btm">
+      <span>&copy; <span class="year">2026</span> Solarjan Jan Witek &middot; Olesno</span>
+      <span><a href="polityka-prywatnosci.html">Polityka prywatno&#347;ci</a></span>
     </div>
   </div>
 </footer>
-<div class="sticky-call"><a class="sc-call" href="tel:+48535276508"><svg class="ico-tel" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" fill="currentColor"/></svg> Zadzwoń</a><a class="sc-quote" href="kontakt.html">Zadzwoń po wycenę</a></div>
-<div class="demo-wazne" data-do="2026-09-18" data-cykl="3" hidden><svg class="dw-ico" width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.2V12l3.3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="dw-txt"></span></div>
+
+<div class="callbar">
+  <a href="tel:+48535276508"><span class="btn btn--pri btn--block">Zadzwo&#324;</span></a>
+  <a href="kontakt.html"><span class="btn btn--ghost btn--block">Napisz</span></a>
+</div>
 
 <script src="assets/main.js"></script>
 </body>

@@ -1,219 +1,656 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solarjan Jan Witek - Fotowoltaika i elektryka · Olesno</title>
-<meta name="description" content="Solarjan Jan Witek - fotowoltaika, magazyny energii, instalacje elektryczne, pomiary z protokołem, monitoring i spawanie światłowodów. Olesno i okolice, klienci prywatni i firmy. Zadzwoń i umów wycenę.">
-<link rel="canonical" href="https://kris20032.github.io/solarjan-jan-witek/">
-<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Solarjan Jan Witek — fotowoltaika, magazyny energii i elektryka | Olesno</title>
+<meta name="description" content="Fotowoltaika, magazyny energii i instalacje elektryczne w Oleśnie i powiecie oleskim. Dobór mocy pod realne zużycie, wycena przed montażem, pomiary z protokołem. Zadzwoń: 535 276 508.">
+<meta name="theme-color" content="#06090F">
+<link rel="canonical" href="https://impulseo-pl.github.io/solarjan-jan-witek/">
+<link rel="icon" href="img/logo.png">
 <meta property="og:type" content="website">
+<meta property="og:title" content="Solarjan Jan Witek — fotowoltaika i elektryka, Olesno">
+<meta property="og:description" content="Panele na dachu i na gruncie, magazyny energii, instalacje elektryczne. Wycena przed montażem.">
+<meta property="og:image" content="https://impulseo-pl.github.io/solarjan-jan-witek/img/og.jpg">
+<meta property="og:url" content="https://impulseo-pl.github.io/solarjan-jan-witek/">
 <meta property="og:locale" content="pl_PL">
-<meta property="og:site_name" content="Solarjan Jan Witek">
-<meta property="og:title" content="Solarjan Jan Witek - Fotowoltaika i elektryka · Olesno">
-<meta property="og:description" content="Solarjan Jan Witek - fotowoltaika, magazyny energii, instalacje elektryczne, pomiary z protokołem, monitoring i spawanie światłowodów. Olesno i okolice, klienci prywatni i firmy. Zadzwoń i umów wycenę.">
-<meta property="og:url" content="https://kris20032.github.io/solarjan-jan-witek/">
-<meta property="og:image" content="https://kris20032.github.io/solarjan-jan-witek/img/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Solarjan Jan Witek", "url": "https://kris20032.github.io/solarjan-jan-witek/", "telephone": "+48535276508", "image": "https://kris20032.github.io/solarjan-jan-witek/img/og.jpg", "areaServed": "Olesno", "sameAs": ["https://www.facebook.com/p/Solarjan-Jan-Witek-100083001147476/", "https://www.google.com/maps/place/Solarjan+Jan+Witek/@50.8746862,18.414472,4638m/data=!3m1!1e3!4m6!3m5!1s0x6fb334b5c54884ab:0x35dd14c9100cd678!8m2!3d50.8760019!4d18.4130481!16s%2Fg%2F11ssd45byc"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=295d6cc1">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Electrician","name":"Solarjan Jan Witek",
+"description":"Fotowoltaika, magazyny energii, instalacje elektryczne, pomiary, monitoring i spawanie światłowodów.",
+"telephone":"+48535276508","email":"jan@solarjan.pl","image":"https://impulseo-pl.github.io/solarjan-jan-witek/img/og.jpg","url":"https://impulseo-pl.github.io/solarjan-jan-witek/",
+"address":{"@type":"PostalAddress","addressLocality":"Olesno","addressRegion":"opolskie","addressCountry":"PL"},
+"areaServed":["Olesno","powiat oleski"],
+"sameAs":["https://www.facebook.com/p/Solarjan-Jan-Witek-100083001147476/"]}
+</script>
 </head>
-<body>
+<body class="is-loading">
 
+<!-- ====================== PRELOADER ====================== -->
+<div id="preloader">
+  <div class="pl">
+    <div class="pl-rays" aria-hidden="true"></div>
+    <div class="pl-logo">
+      <i class="base"></i>
+      <i class="fill"></i>
+    </div>
+    <div class="pl-bar"><b></b></div>
+    <div class="pl-meta">
+      <span>Solarjan · Olesno</span>
+      <span><em id="pl-pct" style="font-style:normal">00</em>%</span>
+    </div>
+  </div>
+</div>
+<div class="pl-flash" aria-hidden="true"></div>
+
+<!-- ====================== TŁO ====================== -->
+<div class="bg-grid" aria-hidden="true"></div>
+<canvas id="grid-canvas" aria-hidden="true"></canvas>
+<div class="aura aura--a" aria-hidden="true"></div>
+<div class="aura aura--b" aria-hidden="true"></div>
+
+<!-- ====================== NAV ====================== -->
 <header class="nav">
-  <div class="wrap nav-inner">
-    <a class="brand brand-has-logo" href="index.html"><img class="brand-logo" src="img/logo.png" alt="Solarjan Jan Witek" width="2012" height="1615" decoding="async"></a>
-    <nav class="nav-links">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Solarjan Jan Witek — strona główna">
+      <img src="img/logo.png" alt="Solarjan" width="60" height="40">
+      <span><b>Solarjan</b><small>Fotowoltaika</small></span>
+    </a>
+    <nav class="nav-links" id="menu">
+      <a href="#przeplyw">Jak to działa</a>
+      <a href="#kalkulator">Kalkulator</a>
       <a href="oferta.html">Oferta</a>
       <a href="realizacje.html">Realizacje</a>
-      <a href="o-nas.html">O nas</a>
+      <a href="o-nas.html">O nas</a>
       <a href="kontakt.html">Kontakt</a>
-      <a href="tel:+48535276508" class="btn btn-accent">Zadzwoń +48 535 276 508</a>
     </nav>
-    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a class="nav-tel" href="tel:+48535276508">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      535 276 508
+    </a>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span></button>
   </div>
 </header>
 
 <main>
-<section class="hero-fach">
-  <img class="hf-photo" src="img/hero.jpg" fetchpriority="high" data-rotate="img/g6.jpg|img/g4.jpg" alt="Solarjan Jan Witek" width="1880" height="1255">
-  <div class="hf-panel">
-    <div class="hf-inner">
-      <span class="hf-kicker">Fotowoltaika i instalacje elektryczne · Olesno</span>
-      <h1 class="hf-title">Własny prąd z dachu <em>i instalacja zrobiona po kolei</em></h1>
-      <p class="hf-lead">Montujemy panele na dachu i na gruncie, dokładamy magazyn energii i wpinamy całość w instalację budynku.</p>
-      <a class="hf-phone" href="tel:+48535276508"><span class="hf-phone-lab">Zadzwoń teraz</span><span class="hf-phone-num"><svg class="ico-tel" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" fill="currentColor"/></svg> +48 535 276 508</span></a>
-      <div class="hf-actions">
-        <a href="kontakt.html" class="btn btn-accent">Zadzwoń po wycenę <span class="arr">→</span></a>
-        <a href="tel:+48535276508" class="btn btn-ghost hf-ghost">Zadzwoń +48 535 276 508</a>
+
+<!-- ====================== HERO ====================== -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="hero-badge"><i></i> Olesno i powiat oleski · dojeżdżamy też dalej</span>
+      <h1>Własny prąd z dachu i instalacja&nbsp;<em>zrobiona po kolei</em></h1>
+      <p class="hero-sub">Dobieramy moc pod to, ile naprawdę zużywasz. Stawiamy konstrukcję, układamy moduły, wpinamy falownik i magazyn energii w instalację budynku. Cenę znasz przed robotą, nie po.</p>
+      <div class="hero-cta">
+        <a class="btn btn--pri" href="tel:+48535276508">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          Zadzwoń po wycenę
+        </a>
+        <a class="btn btn--ghost" href="#kalkulator">Policz swoją oszczędność →</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>0 zł</b><span>kosztuje wycena i dojazd na oględziny</span></div>
+        <div><b>Pod zużycie</b><span>moc liczona z Twojego rachunku</span></div>
+        <div><b>Protokół</b><span>z pomiarów po każdej robocie</span></div>
+        <div><b>Olesno</b><span>i cały powiat oleski</span></div>
+      </div>
+    </div>
+
+    <!-- scena 3D -->
+    <div class="scene" aria-hidden="true">
+      <div class="scene-sun"></div>
+      <div class="scene-ring"></div>
+      <div class="scene-ring r2"></div>
+      <div class="roof">
+        <div class="roof-base"></div>
+        <div class="roof-grid"></div>
+      </div>
+      <div class="scene-tag scene-tag--1"><i></i> Produkcja z dachu</div>
+      <div class="scene-tag scene-tag--2"><i></i> Nadwyżka do magazynu</div>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><b></b> przewiń</div>
+</section>
+
+<!-- ====================== PASEK PRZEWAG ====================== -->
+<section class="strip">
+  <div class="wrap">
+    <div class="strip-in" data-rv="0">
+      <div>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+        <b>Dobór mocy, nie cennik z półki</b>
+        <span>Liczymy z Twojego rachunku i połaci dachu, ile kWp ma sens — bez przewymiarowania.</span>
+      </div>
+      <div>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        <b>Cena razem z materiałem</b>
+        <span>Wycena obejmuje moduły, konstrukcję, falownik, montaż i formalności. Bez dopłat po fakcie.</span>
+      </div>
+      <div>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <b>Pomiary z protokołem</b>
+        <span>Po uruchomieniu mierzymy instalację i zostawiamy dokument — do odbioru albo dla ubezpieczyciela.</span>
+      </div>
+      <div>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+        <b>Elektryka od A do Z</b>
+        <span>Rozdzielnica, obwody, monitoring, światłowód — jedna ekipa, jeden telefon do wszystkiego.</span>
       </div>
     </div>
   </div>
 </section>
-<section class="fach-promise">
+
+<!-- ====================== PRZEPŁYW PRĄDU ====================== -->
+<section id="przeplyw">
   <div class="wrap">
-    <ul class="fp-row reveal"><li>Wycena przed montażem</li><li>Dobór mocy pod zużycie</li><li>Pomiary z protokołem</li><li>Klienci prywatni i firmy</li></ul>
-  </div>
-</section>
-<section class="objawy">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Zacznij tutaj</span>
-      <h2>Z czym do nas dzwonią</h2>
-      <p>Wybierz to, co najbardziej pasuje do Twojej sytuacji. Powiemy, co da się zrobić i ile to kosztuje.</p>
+    <div class="sec-head center" data-rv="0">
+      <span class="eyebrow">Jak to działa</span>
+      <h2 class="h">Zobacz, którędy popłynie Twój prąd</h2>
+      <p class="lead">Ta sama instalacja pracuje inaczej w dzień i inaczej wieczorem. Przełącz i zobacz, co się dzieje z każdą kilowatogodziną z dachu.</p>
     </div>
-    <div class="obj-grid">
-      <a class="obj-tile reveal" href="kontakt.html"><span class="ot-row"><span class="ot-name">Wysokie rachunki za prąd</span><span class="ot-arr" aria-hidden="true">→</span></span></a>
-      <a class="obj-tile reveal" href="kontakt.html"><span class="ot-row"><span class="ot-name">Magazyn energii do PV</span><span class="ot-arr" aria-hidden="true">→</span></span></a>
-      <a class="obj-tile reveal" href="kontakt.html"><span class="ot-row"><span class="ot-name">Nowa instalacja w domu</span><span class="ot-arr" aria-hidden="true">→</span></span></a>
-      <a class="obj-tile reveal" href="kontakt.html"><span class="ot-row"><span class="ot-name">Pomiary i protokół</span><span class="ot-arr" aria-hidden="true">→</span></span></a>
-      <a class="obj-tile reveal" href="kontakt.html"><span class="ot-row"><span class="ot-name">Monitoring na posesji</span><span class="ot-arr" aria-hidden="true">→</span></span></a>
-      <a class="obj-tile reveal" href="kontakt.html"><span class="ot-row"><span class="ot-name">Przyłącze światłowodowe</span><span class="ot-arr" aria-hidden="true">→</span></span></a>
-    </div>
-  </div>
-</section>
-<section class="gateways-band">
-  <div class="wrap">
-    <div class="gateways">
-      <a href="oferta.html" class="gateway reveal"><img src="img/g1.jpg" alt="Fotowoltaika" loading="lazy" width="1600" height="1066" decoding="async"><span class="g-ttl">Fotowoltaika</span></a>
-      <a href="oferta.html" class="gateway reveal"><img src="img/g2.jpg" alt="Magazyny energii" loading="lazy" width="1600" height="1066" decoding="async"><span class="g-ttl">Magazyny energii</span></a>
-      <a href="oferta.html" class="gateway reveal"><img src="img/g3.jpg" alt="Instalacje elektryczne" loading="lazy" width="1600" height="1066" decoding="async"><span class="g-ttl">Instalacje elektryczne</span></a>
-    </div>
-  </div>
-</section>
-<section class="proces proces-os fachowcy">
-  <div class="wrap proc-grid">
-    <div class="proc-side">
-      <div class="head reveal">
-        <span class="eyebrow">Jak pracujemy</span>
-        <h2>Wiesz, na czym stoisz - na każdym etapie</h2>
-        <p>Od pierwszego telefonu do odbioru roboty - krok po kroku.</p>
+
+    <div class="flow-card" id="flow" data-rv="80">
+      <div class="flow-switch" role="group" aria-label="Pora dnia">
+        <button data-mode="dzien" class="on" type="button">☀ Dzień</button>
+        <button data-mode="noc" type="button">☾ Wieczór</button>
       </div>
-      <div class="proc-count" aria-hidden="true"><span class="pc-cur">01</span><span class="pc-all">/ 04</span></div>
-      <div class="proc-bar" aria-hidden="true"><i></i></div>
-      <p class="proc-now" aria-hidden="true">Rozmowa i rachunek za prąd</p>
+
+      <div class="flow-scroll">
+      <svg class="flow-svg" viewBox="0 0 1000 360" role="img" aria-label="Schemat przepływu energii: panele, falownik, dom, magazyn energii, sieć">
+        <defs>
+          <linearGradient id="gAmber" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#FFB302"/><stop offset="1" stop-color="#FFD666"/>
+          </linearGradient>
+        </defs>
+
+        <!-- PRZEWODY (statyczne) -->
+        <path class="flow-wire" d="M210 180 H320"/>
+        <path class="flow-wire" d="M440 180 C 505 180 520 90 590 90"/>
+        <path class="flow-wire" d="M440 180 C 505 180 520 275 590 275"/>
+        <path class="flow-wire" d="M440 180 H840"/>
+
+        <!-- IMPULSY: DZIEŃ -->
+        <g data-only="dzien">
+          <path class="flow-live" style="color:#FFB302" stroke="#FFB302" d="M210 180 H320"/>
+          <path class="flow-live" style="color:#FFB302" stroke="#FFB302" d="M440 180 C 505 180 520 90 590 90"/>
+          <path class="flow-live" style="color:#FFB302" stroke="#FFB302" d="M440 180 C 505 180 520 275 590 275"/>
+          <path class="flow-live" style="color:#4DE1FF" stroke="#4DE1FF" d="M440 180 H840"/>
+        </g>
+        <!-- IMPULSY: WIECZÓR (magazyn i sieć zasilają dom) -->
+        <g data-only="noc">
+          <path class="flow-live" style="color:#4DE1FF" stroke="#4DE1FF" d="M590 275 C 520 275 505 180 440 180"/>
+          <path class="flow-live" style="color:#4DE1FF" stroke="#4DE1FF" d="M440 180 C 505 180 520 90 590 90"/>
+          <path class="flow-live" style="color:#6C7C8E" stroke="#6C7C8E" d="M840 180 H440"/>
+        </g>
+
+        <!-- WĘZŁY -->
+        <g class="flow-node">
+          <!-- panele -->
+          <g>
+            <rect x="90" y="140" width="120" height="80" rx="14" fill="#0E1520" stroke="rgba(255,255,255,.16)"/>
+            <rect x="108" y="158" width="84" height="30" rx="3" fill="#13293C" stroke="rgba(120,190,230,.35)"/>
+            <path d="M108 173 H192 M136 158 V188 M164 158 V188" stroke="rgba(120,190,230,.35)" stroke-width="1"/>
+            <text x="150" y="207" text-anchor="middle">Panele</text>
+          </g>
+          <!-- falownik -->
+          <g>
+            <rect x="320" y="140" width="120" height="80" rx="14" fill="#0E1520" stroke="rgba(255,179,2,.45)"/>
+            <path d="M356 168 l14 -14 v9 h14 l-14 14 v-9 z" fill="#FFB302"/>
+            <text x="380" y="207" text-anchor="middle">Falownik</text>
+          </g>
+          <!-- dom -->
+          <g>
+            <rect x="590" y="50" width="120" height="80" rx="14" fill="#0E1520" stroke="rgba(255,255,255,.16)"/>
+            <path d="M630 92 l20 -18 20 18 v16 h-40 z" fill="none" stroke="#EEF3F9" stroke-width="1.6" stroke-linejoin="round"/>
+            <text x="650" y="122" text-anchor="middle">Twój dom</text>
+          </g>
+          <!-- magazyn -->
+          <g>
+            <rect x="590" y="235" width="120" height="80" rx="14" fill="#0E1520" stroke="rgba(255,255,255,.16)"/>
+            <rect x="634" y="258" width="32" height="20" rx="4" fill="none" stroke="#4DE1FF" stroke-width="1.6"/>
+            <rect x="638" y="262" width="18" height="12" rx="2" fill="#4DE1FF"/>
+            <path d="M666 264 h5 v8 h-5" fill="none" stroke="#4DE1FF" stroke-width="1.6"/>
+            <text x="650" y="297" text-anchor="middle">Magazyn</text>
+          </g>
+          <!-- sieć -->
+          <g>
+            <rect x="840" y="140" width="120" height="80" rx="14" fill="#0E1520" stroke="rgba(255,255,255,.16)"/>
+            <path d="M890 156 v40 M880 166 h20 M878 180 h24" fill="none" stroke="#A8B6C6" stroke-width="1.6"/>
+            <text x="900" y="207" text-anchor="middle">Sieć</text>
+          </g>
+        </g>
+
+        <!-- OPISY PRZY PRZEWODACH -->
+        <g class="flow-node" font-size="11.5">
+          <text x="265" y="168" text-anchor="middle" fill="#6C7C8E" data-only="dzien">prąd stały</text>
+          <text x="533" y="118" text-anchor="middle" fill="#6C7C8E">zasilanie domu</text>
+          <text x="540" y="238" text-anchor="middle" fill="#6C7C8E" data-only="dzien">ładowanie</text>
+          <text x="540" y="238" text-anchor="middle" fill="#6C7C8E" data-only="noc">oddawanie</text>
+          <text x="700" y="168" text-anchor="middle" fill="#6C7C8E" data-only="dzien">nadwyżka do sieci</text>
+          <text x="700" y="168" text-anchor="middle" fill="#6C7C8E" data-only="noc">dobór z sieci</text>
+        </g>
+      </svg>
+      </div>
+
+      <div class="flow-legend">
+        <span><i style="background:#FFB302"></i>produkcja z dachu</span>
+        <span><i style="background:#4DE1FF"></i>magazyn energii</span>
+        <span><i style="background:#6C7C8E"></i>sieć energetyczna</span>
+      </div>
     </div>
-    <ol class="proces-line">
-      <li class="reveal"><span class="pno">01</span><h3>Rozmowa i rachunek za prąd</h3><p>Mówisz, ile prądu zużywasz i co masz na dachu. Z rachunku i zdjęcia połaci wychodzi, jaka moc ma sens i czy od razu dokładać magazyn.</p></li>
-      <li class="reveal"><span class="pno">02</span><h3>Wycena i termin</h3><p>Podajemy cenę razem z materiałem, montażem i formalnościami. Cenę znasz przed robotą, nie po.</p></li>
-      <li class="reveal"><span class="pno">03</span><h3>Montaż</h3><p>Stawiamy konstrukcję, układamy moduły, prowadzimy trasy kablowe i podłączamy falownik. Pracujemy tak, żeby dach i elewacja wyglądały po nas jak przed.</p></li>
-      <li class="reveal"><span class="pno">04</span><h3>Uruchomienie i pomiary</h3><p>Uruchamiamy instalację, mierzymy i zostawiamy protokół. Na miejscu pokazujemy, jak sprawdzić produkcję i co zrobić, gdyby coś zgasło.</p></li>
-    </ol>
   </div>
 </section>
-<section>
+
+<!-- ====================== KALKULATOR ====================== -->
+<section id="kalkulator">
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Realizacje</span>
-      <h2>Jak to wygląda w robocie</h2>
-      <p>Przykłady instalacji tego rodzaju, jakie wykonujemy - montaż na dachu i na gruncie, rozdzielnice, monitoring i światłowody.</p>
+    <div class="sec-head center" data-rv="0">
+      <span class="eyebrow">Kalkulator</span>
+      <h2 class="h">Ile z Twojego rachunku może zostać w kieszeni</h2>
+      <p class="lead">Przesuń suwak na swój miesięczny rachunek za prąd. Pokażemy szacunkową moc instalacji i roczną oszczędność. Dokładną wycenę podajemy po obejrzeniu dachu.</p>
     </div>
-    <div class="gallery">
-      <div class="tile t-two3 reveal"><img src="img/g5.jpg" alt="Solarjan Jan Witek" loading="lazy" width="1600" height="1066" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g7.jpg" alt="Solarjan Jan Witek" loading="lazy" width="1600" height="1066" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g8.jpg" alt="Solarjan Jan Witek" loading="lazy" width="1600" height="1066" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g9.jpg" alt="Solarjan Jan Witek" loading="lazy" width="1600" height="1067" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g10.jpg" alt="Solarjan Jan Witek" loading="lazy" width="1600" height="1066" decoding="async"></div>
+
+    <div class="calc" data-rv="80">
+      <div class="calc-in">
+        <h3>Twoja sytuacja</h3>
+        <p class="calc-note">Dwie rzeczy — ile płacisz i czy chcesz odkładać prąd na wieczór.</p>
+
+        <div class="field">
+          <div class="field-top">
+            <label for="bill">Miesięczny rachunek za prąd</label>
+            <b id="bill-val">400 zł</b>
+          </div>
+          <input type="range" id="bill" min="150" max="2500" step="25" value="400">
+          <div class="range-scale"><span>150 zł</span><span>2 500 zł</span></div>
+        </div>
+
+        <div class="toggle" id="with-bat" role="button" tabindex="0" aria-pressed="false">
+          <span class="toggle-sw" aria-hidden="true"></span>
+          <span>
+            <b>Z magazynem energii</b>
+            <span>Nadwyżka z dnia zostaje u Ciebie na wieczór, zamiast iść do sieci.</span>
+          </span>
+        </div>
+
+        <p class="calc-foot">Liczymy przy założeniach: 1 kWp daje ok. 1&nbsp;000 kWh rocznie w naszym rejonie, prąd ok. 1,00 zł/kWh razem z dystrybucją, nadwyżki rozliczane ok. 0,40 zł/kWh. Bez magazynu zużywasz na bieżąco ok. 30% produkcji, z magazynem ok. 75%. Od oszczędności odejmujemy opłaty stałe, których fotowoltaika nie zbija.</p>
+
+        <div class="calc-rows" style="margin-top:28px">
+          <div><span>Oględziny i wycena</span><b style="color:var(--amber)">0 zł</b></div>
+          <div><span>Cena z materiałem i montażem</span><b>przed robotą</b></div>
+          <div><span>Pomiary i protokół po uruchomieniu</span><b>w cenie</b></div>
+        </div>
+      </div>
+
+      <div class="calc-out">
+        <div class="calc-hero-lbl">Szacunkowa oszczędność rocznie</div>
+        <div class="calc-hero"><b id="r-save">0</b><span>zł</span></div>
+
+        <div class="calc-bars">
+          <div class="bar-row">
+            <small>dziś płacisz</small>
+            <div class="bar now" id="bar-now"><i></i><b id="bar-now-v">0 zł</b></div>
+          </div>
+          <div class="bar-row">
+            <small>po instalacji</small>
+            <div class="bar after" id="bar-after"><i></i><b id="bar-after-v">0 zł</b></div>
+          </div>
+        </div>
+
+        <div class="calc-rows">
+          <div><span>Dobrana moc instalacji</span><b id="r-power">—</b></div>
+          <div><span>Produkcja rocznie</span><b id="r-prod">—</b></div>
+          <div><span>Mniej na rachunku miesięcznie</span><b id="r-month">—</b></div>
+          <div><span>Szacunkowy koszt instalacji</span><b id="r-cost">—</b></div>
+          <div><span>Zwrot inwestycji</span><b id="r-back">—</b></div>
+        </div>
+
+        <div class="calc-cta">
+          <a class="btn btn--pri btn--block" href="tel:+48535276508">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            Sprawdźmy to na Twoim dachu — 535 276 508
+          </a>
+          <a class="btn btn--ghost btn--block" href="kontakt.html">Wolę, żebyście oddzwonili</a>
+        </div>
+        <p class="calc-foot">Wynik jest szacunkiem poglądowym, nie ofertą. Realna produkcja zależy od kąta i strony dachu, zacienienia i tego, w jakich godzinach zużywasz prąd. Po oględzinach podajemy konkretną cenę i konkretną moc.</p>
+      </div>
     </div>
-    <div style="margin-top:var(--space-7)" class="reveal"><a href="realizacje.html" class="btn btn-accent">Pełna galeria <span class="arr">→</span></a></div>
   </div>
 </section>
-<section class="fach-uslugi">
+
+<!-- ====================== USŁUGI ====================== -->
+<section id="uslugi">
   <div class="wrap">
-    <div class="head reveal">
+    <div class="sec-head" data-rv="0">
       <span class="eyebrow">Co robimy</span>
-      <h2>Zakres prac</h2>
-      <p>Roboty, które wykonujemy regularnie - przy każdej piszemy, co wchodzi w zakres.</p>
+      <h2 class="h">Zakres prac, które wykonujemy regularnie</h2>
+      <p class="lead">Fotowoltaika to trzon, ale nie koniec. Robimy całą elektrykę wokół budynku — nie musisz szukać drugiej ekipy.</p>
     </div>
-    <ul class="fu-list">
-      <li class="fu-row reveal"><div class="fu-name">Fotowoltaika</div><div class="fu-desc">Dobieramy moc instalacji pod realne zużycie prądu w budynku, stawiamy konstrukcję i układamy moduły na dachu albo na gruncie.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
-      <li class="fu-row reveal"><div class="fu-name">Magazyny energii</div><div class="fu-desc">Falownik hybrydowy z magazynem odkłada nadwyżkę z dnia na wieczór, zamiast oddawać ją do sieci.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
-      <li class="fu-row reveal"><div class="fu-name">Instalacje elektryczne</div><div class="fu-desc">Rozprowadzamy instalację w nowym domu i modernizujemy starą: obwody, rozdzielnica, zabezpieczenia, osprzęt.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
-      <li class="fu-row reveal"><div class="fu-name">Przeglądy i pomiary</div><div class="fu-desc">Mierzymy instalację i wystawiamy protokół - do odbioru budynku, do ubezpieczyciela albo dla własnego spokoju.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
-      <li class="fu-row reveal"><div class="fu-name">Monitoring</div><div class="fu-desc">Kamery ustawiamy tak, żeby pokrywały wjazd, drzwi i podwórko bez martwych pól.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
-      <li class="fu-row reveal"><div class="fu-name">Spawanie światłowodów</div><div class="fu-desc">Spawamy i zakańczamy włókna: przyłącza, przedłużenia trasy, naprawy po uszkodzonym kablu.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
-    </ul>
-    <div style="margin-top:var(--space-7)" class="reveal"><a href="oferta.html" class="btn btn-ghost">Pełna oferta <span class="arr">→</span></a></div>
+
+    <div class="cards">
+      <article class="card" data-rv="0">
+        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 16 6 6h12l2 10z"/><path d="M2 16h20"/><path d="M9 6l-1 10M15 6l1 10M5 11h14"/></svg></div>
+        <h3>Fotowoltaika</h3>
+        <p>Dobieramy moc pod realne zużycie w budynku, stawiamy konstrukcję i układamy moduły — na dachu albo na gruncie.</p>
+        <ul><li>dach skośny, płaski i grunt</li><li>dobór falownika pod instalację</li><li>zgłoszenie do operatora</li></ul>
+        <a class="card-link" href="oferta.html#fotowoltaika">Szczegóły <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="card" data-rv="70">
+        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 10v4"/><path d="M6 10v4M10 10v4"/></svg></div>
+        <h3>Magazyny energii</h3>
+        <p>Falownik hybrydowy z magazynem odkłada nadwyżkę z dnia na wieczór, zamiast oddawać ją do sieci za ułamek ceny.</p>
+        <ul><li>dobór pojemności pod zużycie</li><li>praca przy zaniku napięcia</li><li>rozbudowa istniejącej PV</li></ul>
+        <a class="card-link" href="oferta.html#magazyny">Szczegóły <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="card" data-rv="140">
+        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></div>
+        <h3>Instalacje elektryczne</h3>
+        <p>Rozprowadzamy instalację w nowym domu i modernizujemy starą: obwody, rozdzielnica, zabezpieczenia, osprzęt.</p>
+        <ul><li>domy w budowie i remonty</li><li>wymiana rozdzielnicy</li><li>obwody pod pompę ciepła i ładowarkę</li></ul>
+        <a class="card-link" href="oferta.html#elektryka">Szczegóły <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="card" data-rv="0">
+        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg></div>
+        <h3>Przeglądy i pomiary</h3>
+        <p>Mierzymy instalację i wystawiamy protokół — do odbioru budynku, do ubezpieczyciela albo dla własnego spokoju.</p>
+        <ul><li>pomiary odbiorcze i okresowe</li><li>skuteczność ochrony przeciwporażeniowej</li><li>protokół w formie papierowej</li></ul>
+        <a class="card-link" href="oferta.html#pomiary">Szczegóły <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="card" data-rv="70">
+        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8a4 4 0 0 1 4-4h9a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><circle cx="10.5" cy="12" r="3"/><path d="M19 10l3-2v8l-3-2"/></svg></div>
+        <h3>Monitoring</h3>
+        <p>Kamery ustawiamy tak, żeby pokrywały wjazd, drzwi i podwórko bez martwych pól. Podgląd na telefonie.</p>
+        <ul><li>dobór punktów kamerowych</li><li>rejestrator i okablowanie</li><li>konfiguracja podglądu zdalnego</li></ul>
+        <a class="card-link" href="oferta.html#monitoring">Szczegóły <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="card" data-rv="140">
+        <div class="card-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c4 0 4-6 8-6s4 6 8 6"/><circle cx="12" cy="12" r="1.6"/><path d="M3 18h18"/></svg></div>
+        <h3>Spawanie światłowodów</h3>
+        <p>Spawamy i zakańczamy włókna: przyłącza, przedłużenia trasy, naprawy po uszkodzonym kablu.</p>
+        <ul><li>przyłącza do budynku</li><li>naprawy przerwanych tras</li><li>pomiar i zakończenie włókien</li></ul>
+        <a class="card-link" href="oferta.html#swiatlowody">Szczegóły <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+    </div>
   </div>
 </section>
-<section class="stopklatka" aria-hidden="true">
-  <div class="stk-bg" style="background-image:url(img/g11.jpg)"></div>
-</section>
-<section class="opinie op-fallback">
+
+<!-- ====================== PROCES ====================== -->
+<section id="proces">
   <div class="wrap">
-    <div class="head center reveal">
-      <span class="eyebrow">Opinie</span>
-      <h2>Co mówią klienci</h2>
-      <p>Najlepiej o robocie mówią ci, dla których ją zrobiliśmy. Zapytaj o realizacje w okolicy, zanim się zdecydujesz.</p>
+    <div class="sec-head" data-rv="0">
+      <span class="eyebrow">Jak pracujemy</span>
+      <h2 class="h">Wiesz, na czym stoisz — na każdym etapie</h2>
+      <p class="lead">Od pierwszego telefonu do odbioru roboty. Cztery kroki, żadnych niespodzianek w środku.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step" data-rv="0">
+        <div class="step-no">01</div>
+        <div>
+          <h3>Rozmowa i rachunek za prąd</h3>
+          <p>Mówisz, ile prądu zużywasz i co masz na dachu. Z rachunku i zdjęcia połaci wychodzi, jaka moc ma sens i czy od razu dokładać magazyn.</p>
+        </div>
+      </div>
+      <div class="step" data-rv="0">
+        <div class="step-no">02</div>
+        <div>
+          <h3>Oględziny i wycena</h3>
+          <p>Przyjeżdżamy zobaczyć dach, rozdzielnicę i trasy kablowe. Podajemy cenę razem z materiałem, montażem i formalnościami — przed robotą, nie po.</p>
+        </div>
+      </div>
+      <div class="step" data-rv="0">
+        <div class="step-no">03</div>
+        <div>
+          <h3>Montaż</h3>
+          <p>Stawiamy konstrukcję, układamy moduły, prowadzimy trasy kablowe i podłączamy falownik. Pracujemy tak, żeby dach i elewacja wyglądały po nas jak przed.</p>
+        </div>
+      </div>
+      <div class="step" data-rv="0">
+        <div class="step-no">04</div>
+        <div>
+          <h3>Uruchomienie i pomiary</h3>
+          <p>Uruchamiamy instalację, mierzymy i zostawiamy protokół. Na miejscu pokazujemy, jak sprawdzić produkcję i co zrobić, gdyby coś zgasło.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<section class="obszar">
+
+<!-- ====================== REALIZACJE (rysowane) ====================== -->
+<section id="realizacje">
   <div class="wrap">
-    <div class="head center reveal">
-      <span class="eyebrow">Obszar działania</span>
-      <h2>Dojeżdżamy do Ciebie</h2>
+    <div class="sec-head" data-rv="0">
+      <span class="eyebrow">Realizacje</span>
+      <h2 class="h">Rodzaje instalacji, które stawiamy</h2>
+      <p class="lead">Cztery układy, które powtarzają się najczęściej w domach w okolicy. Przy telefonie powiemy, który pasuje do Twojego dachu.</p>
     </div>
-    <p class="obszar-txt reveal" style="text-align:center;max-width:60ch;margin:0 auto 1.4rem">Pracujemy w Oleśnie i w powiecie oleskim, dojeżdżamy też dalej po okolicy. Podaj adres, a powiemy od razu, czy to nasz teren.</p>
-    <ul class="obszar-list reveal"><li class="is-home">Olesno</li><li>+ okolice</li></ul>
-    <div class="obszar-mapa reveal" style="margin-top:var(--space-7)">
-      <iframe title="Obszar działania - Olesno i okolice" src="https://maps.google.com/maps?q=50.8746862%2C18.414472&amp;z=11&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:clamp(280px,38vh,420px);border:0;display:block;border-radius:var(--r-md)"></iframe>
+
+    <div class="works">
+      <article class="work" data-rv="0">
+        <div class="work-art">
+          <svg viewBox="0 0 400 225" fill="none" aria-hidden="true">
+            <path d="M60 170 L200 80 L340 170" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+            <path d="M60 170 H340" stroke="rgba(255,255,255,.14)" stroke-width="2"/>
+            <g stroke="rgba(120,190,230,.5)" fill="rgba(19,41,60,.85)">
+              <path d="M110 148 l64 -41 26 0 -64 41z"/><path d="M180 148 l64 -41 26 0 -64 41z"/>
+              <path d="M142 170 l64 -41 26 0 -64 41z"/><path d="M212 170 l64 -41 26 0 -64 41z"/>
+            </g>
+            <circle cx="322" cy="52" r="17" fill="rgba(255,179,2,.9)"/>
+            <g stroke="rgba(255,179,2,.55)" stroke-width="2" stroke-linecap="round">
+              <path d="M322 22 v10M322 72 v10M292 52 h10M342 52 h10M301 31 l7 7M336 66 l7 7M343 31 l-7 7M308 66 l-7 7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="work-txt">
+          <h3>Dach skośny, blachodachówka lub karpiówka</h3>
+          <p>Konstrukcja na uchwytach pod pokryciem, moduły w jednej płaszczyźnie z połacią. Trasy prowadzone tak, żeby nie było widać kabli na elewacji.</p>
+          <div class="tagrow"><span class="tag">dom jednorodzinny</span><span class="tag">4–10 kWp</span><span class="tag">falownik w kotłowni</span></div>
+        </div>
+      </article>
+
+      <article class="work" data-rv="70">
+        <div class="work-art">
+          <svg viewBox="0 0 400 225" fill="none" aria-hidden="true">
+            <path d="M40 185 H360" stroke="rgba(255,255,255,.16)" stroke-width="2"/>
+            <g stroke="rgba(120,190,230,.5)" fill="rgba(19,41,60,.85)">
+              <path d="M70 150 l90 -48 h64 l-90 48z"/><path d="M170 150 l90 -48 h64 l-90 48z"/>
+            </g>
+            <path d="M96 150 v35M150 150 v35M240 150 v35M294 150 v35" stroke="rgba(255,255,255,.3)" stroke-width="3"/>
+            <path d="M40 185 q20 -12 40 0 q20 -12 40 0" stroke="rgba(255,179,2,.25)" stroke-width="2"/>
+            <circle cx="330" cy="55" r="15" fill="rgba(255,179,2,.85)"/>
+          </svg>
+        </div>
+        <div class="work-txt">
+          <h3>Instalacja na gruncie</h3>
+          <p>Kiedy dach jest zacieniony albo źle ustawiony — stawiamy konstrukcję na działce, pod optymalnym kątem. Łatwiejszy serwis i mycie modułów.</p>
+          <div class="tagrow"><span class="tag">gospodarstwo</span><span class="tag">10–20 kWp</span><span class="tag">optymalny kąt</span></div>
+        </div>
+      </article>
+
+      <article class="work" data-rv="0">
+        <div class="work-art">
+          <svg viewBox="0 0 400 225" fill="none" aria-hidden="true">
+            <rect x="126" y="38" width="148" height="150" rx="10" stroke="rgba(255,255,255,.22)" stroke-width="2" fill="rgba(255,255,255,.02)"/>
+            <g stroke="rgba(255,255,255,.16)"><path d="M126 78 H274M126 118 H274M126 158 H274"/></g>
+            <g fill="rgba(255,179,2,.85)">
+              <rect x="140" y="56" width="16" height="14" rx="3"/><rect x="162" y="56" width="16" height="14" rx="3"/>
+              <rect x="184" y="56" width="16" height="14" rx="3"/>
+            </g>
+            <g fill="rgba(77,225,255,.7)">
+              <rect x="140" y="96" width="16" height="14" rx="3"/><rect x="162" y="96" width="16" height="14" rx="3"/>
+              <rect x="184" y="96" width="16" height="14" rx="3"/><rect x="206" y="96" width="16" height="14" rx="3"/>
+            </g>
+            <g fill="rgba(255,255,255,.28)">
+              <rect x="140" y="136" width="16" height="14" rx="3"/><rect x="162" y="136" width="16" height="14" rx="3"/>
+            </g>
+            <path d="M100 113 H126M274 113 H300" stroke="rgba(255,179,2,.5)" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="work-txt">
+          <h3>Rozdzielnica i zabezpieczenia</h3>
+          <p>Wymiana starej tablicy bezpiecznikowej na rozdzielnicę z opisanymi obwodami, różnicówkami i miejscem na przyszłą pompę ciepła czy ładowarkę.</p>
+          <div class="tagrow"><span class="tag">modernizacja</span><span class="tag">opisane obwody</span><span class="tag">pomiary</span></div>
+        </div>
+      </article>
+
+      <article class="work" data-rv="70">
+        <div class="work-art">
+          <svg viewBox="0 0 400 225" fill="none" aria-hidden="true">
+            <rect x="60" y="60" width="120" height="88" rx="10" stroke="rgba(255,255,255,.2)" stroke-width="2" fill="rgba(255,255,255,.02)"/>
+            <rect x="76" y="78" width="40" height="26" rx="5" fill="rgba(77,225,255,.75)"/>
+            <path d="M76 118 h88M76 132 h56" stroke="rgba(255,255,255,.2)" stroke-width="3" stroke-linecap="round"/>
+            <g stroke="rgba(255,179,2,.6)" stroke-width="2">
+              <path d="M240 104 l38 -22 v44z" fill="rgba(255,179,2,.12)"/>
+              <rect x="278" y="86" width="46" height="36" rx="7" fill="rgba(255,179,2,.1)"/>
+            </g>
+            <path d="M180 104 H240" stroke="rgba(77,225,255,.6)" stroke-width="2" stroke-dasharray="6 6"/>
+            <path d="M60 170 H340" stroke="rgba(255,255,255,.12)" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="work-txt">
+          <h3>Monitoring i światłowód</h3>
+          <p>Kamery na wjeździe i wokół budynku, rejestrator w środku, podgląd na telefonie. Przy okazji doprowadzamy albo naprawiamy przyłącze światłowodowe.</p>
+          <div class="tagrow"><span class="tag">posesja</span><span class="tag">podgląd zdalny</span><span class="tag">spawy włókien</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
-<section class="cta">
+
+<!-- ====================== FAQ ====================== -->
+<section id="faq">
   <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Współpraca</span>
-      <h2>Potrzebujesz fachowca? Wycenimy za darmo.</h2>
-      <p>Jeden telefon i przyjedziemy zobaczyć zakres. Wycena nic nie kosztuje.</p>
+    <div class="sec-head center" data-rv="0">
+      <span class="eyebrow">Pytania</span>
+      <h2 class="h">O to pytają najczęściej przez telefon</h2>
     </div>
-    <div class="cta-actions reveal">
-      <a href="kontakt.html" class="btn btn-light">Zadzwoń po wycenę <span class="arr">→</span></a>
-      <a href="tel:+48535276508" class="btn btn-ghost btn-ghost-cta">+48 535 276 508</a>
+
+    <div class="faq" data-rv="60">
+      <div class="q">
+        <button class="q-head" aria-expanded="false" type="button">Ile trwa montaż instalacji na domu jednorodzinnym?<i></i></button>
+        <div class="q-body"><p>Sam montaż typowej instalacji na dachu skośnym to zwykle jeden do dwóch dni roboczych. Do tego dochodzą formalności po stronie operatora sieci — zgłoszenie i wymiana licznika — i to jest ta część, która potrafi potrwać kilka tygodni. Konkretny termin podajemy przy wycenie, po obejrzeniu dachu.</p></div>
+      </div>
+      <div class="q">
+        <button class="q-head" aria-expanded="false" type="button">Czy magazyn energii opłaca się od razu, czy można go dołożyć później?<i></i></button>
+        <div class="q-body"><p>Można dołożyć później, ale wtedy często trzeba wymienić falownik na hybrydowy. Jeżeli już teraz wiesz, że magazyn Cię interesuje, taniej wychodzi od razu falownik przygotowany pod baterię — sam magazyn dokładasz, kiedy chcesz. Przy telefonie mówimy wprost, co się w Twoim przypadku bardziej opłaca.</p></div>
+      </div>
+      <div class="q">
+        <button class="q-head" aria-expanded="false" type="button">Czy instalacja działa, kiedy nie ma prądu w sieci?<i></i></button>
+        <div class="q-body"><p>Zwykła instalacja fotowoltaiczna przy zaniku napięcia wyłącza się — tak działa zabezpieczenie, żeby nie podawać napięcia na sieć, przy której ktoś może pracować. Żeby mieć zasilanie podczas przerwy, potrzebny jest falownik hybrydowy z funkcją pracy wyspowej i magazyn energii. Wtedy wybrane obwody w domu działają dalej.</p></div>
+      </div>
+      <div class="q">
+        <button class="q-head" aria-expanded="false" type="button">Co, jeśli mój dach jest częściowo zacieniony?<i></i></button>
+        <div class="q-body"><p>Zacienienie nie przekreśla instalacji, ale trzeba je uwzględnić przy projekcie — czasem wystarczy inaczej rozłożyć moduły, czasem sensowniej jest wyjść z instalacją na grunt. Dlatego przyjeżdżamy zobaczyć działkę, zamiast liczyć wszystko zza biurka.</p></div>
+      </div>
+      <div class="q">
+        <button class="q-head" aria-expanded="false" type="button">Czy wycena i dojazd na oględziny coś kosztują?<i></i></button>
+        <div class="q-body"><p>Nie. Przyjeżdżamy, oglądamy dach, rozdzielnicę i trasy, po czym podajemy cenę. Nic za to nie płacisz i nic Cię to nie zobowiązuje.</p></div>
+      </div>
+      <div class="q">
+        <button class="q-head" aria-expanded="false" type="button">Robicie też zwykłą elektrykę, czy tylko fotowoltaikę?<i></i></button>
+        <div class="q-body"><p>Robimy jedno i drugie. Instalacje w nowych domach, modernizacje starych, rozdzielnice, pomiary z protokołem, monitoring i spawanie światłowodów. W praktyce często zaczyna się od paneli, a kończy na doprowadzeniu obwodu pod ładowarkę do auta.</p></div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- ====================== OBSZAR ====================== -->
+<section id="obszar">
+  <div class="wrap">
+    <div class="area">
+      <div data-rv="0">
+        <span class="eyebrow">Obszar działania</span>
+        <h2 class="h">Dojeżdżamy do Ciebie</h2>
+        <p class="lead">Pracujemy w Oleśnie i w powiecie oleskim, wyjeżdżamy też dalej po okolicy. Podaj adres przez telefon, a od razu powiemy, czy to nasz teren.</p>
+        <ul>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Olesno i gminy powiatu oleskiego</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Klienci prywatni i firmy</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Dalsze wyjazdy — do uzgodnienia przy wycenie</li>
+        </ul>
+      </div>
+      <div class="radar" data-rv="80" aria-hidden="true">
+        <span class="radar-ring" style="animation-delay:0s"></span>
+        <span class="radar-ring" style="animation-delay:1.3s"></span>
+        <span class="radar-ring" style="animation-delay:2.6s"></span>
+        <span class="radar-core"></span>
+        <span class="radar-label c">Olesno</span>
+        <span class="radar-label a">Gorzów Śląski</span>
+        <span class="radar-label b">Praszka</span>
+        <span class="radar-label d">Dobrodzień</span>
+        <span class="radar-label e">Zębowice</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CTA ====================== -->
+<section id="kontakt-cta">
+  <div class="wrap">
+    <div class="cta-final" data-rv="0">
+      <span class="eyebrow" style="justify-content:center">Wycena za darmo</span>
+      <h2>Jeden telefon i przyjedziemy zobaczyć zakres</h2>
+      <p class="lead">Powiedz, ile płacisz za prąd i co masz na dachu. Resztę policzymy my — wycena nic nie kosztuje i do niczego nie zobowiązuje.</p>
+      <a class="cta-tel" href="tel:+48535276508">+48 535 276 508</a>
+      <div class="cta-final-btns">
+        <a class="btn btn--pri" href="tel:+48535276508">Zadzwoń teraz</a>
+        <a class="btn btn--ghost" href="kontakt.html">Zostaw numer — oddzwonimy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
+<!-- ====================== FOOTER ====================== -->
 <footer>
   <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <div class="name">Solarjan Jan Witek</div>
-        <p>Montujemy panele na dachu i na gruncie, dokładamy magazyn energii i wpinamy całość w instalację budynku.</p>
+    <div class="foot">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="img/logo.png" alt="Solarjan" width="60" height="40">
+          <span><b>Solarjan</b><small>Fotowoltaika</small></span>
+        </a>
+        <p>Solarjan Jan Witek — fotowoltaika, magazyny energii i instalacje elektryczne. Olesno i powiat oleski.</p>
       </div>
-      <div class="foot-col">
-        <h4>Nawigacja</h4>
-        <a href="oferta.html">Oferta</a>
-        <a href="realizacje.html">Realizacje</a>
-        <a href="o-nas.html">O nas</a>
-        <a href="kontakt.html">Kontakt</a>
+      <div>
+        <h4>Strona</h4>
+        <ul>
+          <li><a href="oferta.html">Oferta</a></li>
+          <li><a href="realizacje.html">Realizacje</a></li>
+          <li><a href="o-nas.html">O nas</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#kalkulator">Kalkulator oszczędności</a></li>
+        </ul>
       </div>
-      <div class="foot-col">
+      <div>
         <h4>Kontakt</h4>
-        <a href="tel:+48535276508">+48 535 276 508</a>
-        <a href="mailto:jan@solarjan.pl">jan@solarjan.pl</a>
-        <p>Olesno, opolskie</p>
-      <div class="foot-soc">
-        <a class="soc" href="https://www.facebook.com/p/Solarjan-Jan-Witek-100083001147476/" target="_blank" rel="noopener" aria-label="Facebook - Solarjan Jan Witek"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" fill="currentColor"/></svg></a>
-        <a class="soc" href="https://www.google.com/maps/place/Solarjan+Jan+Witek/@50.8746862,18.414472,4638m/data=!3m1!1e3!4m6!3m5!1s0x6fb334b5c54884ab:0x35dd14c9100cd678!8m2!3d50.8760019!4d18.4130481!16s%2Fg%2F11ssd45byc" target="_blank" rel="noopener" aria-label="Google - Solarjan Jan Witek"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" fill="currentColor"/></svg></a>
-      </div>
+        <ul>
+          <li><a href="tel:+48535276508">+48 535 276 508</a></li>
+          <li><a href="mailto:jan@solarjan.pl">jan@solarjan.pl</a></li>
+          <li><a href="https://www.facebook.com/p/Solarjan-Jan-Witek-100083001147476/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.google.com/maps/place/Solarjan+Jan+Witek/@50.8746862,18.414472,4638m/data=!3m1!1e3" target="_blank" rel="noopener">Wizytówka Google</a></li>
+        </ul>
       </div>
     </div>
-    <div class="foot-bot">
-      <span>© 2026 Solarjan Jan Witek</span>
-      <span>Projekt strony: <a class="foot-credit" href="https://impulseo.pl" target="_blank" rel="noopener">Impulseo</a></span>
+    <div class="foot-btm">
+      <span>© <span class="year">2026</span> Solarjan Jan Witek · Olesno</span>
+      <span><a href="polityka-prywatnosci.html">Polityka prywatności</a></span>
     </div>
   </div>
 </footer>
-<div class="sticky-call"><a class="sc-call" href="tel:+48535276508"><svg class="ico-tel" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" fill="currentColor"/></svg> Zadzwoń</a><a class="sc-quote" href="kontakt.html">Zadzwoń po wycenę</a></div>
-<div class="demo-wazne" data-do="2026-09-18" data-cykl="3" hidden><svg class="dw-ico" width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.2V12l3.3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="dw-txt"></span></div>
+
+<div class="callbar">
+  <a href="tel:+48535276508"><span class="btn btn--pri btn--block">Zadzwoń</span></a>
+  <a href="#kalkulator"><span class="btn btn--ghost btn--block">Kalkulator</span></a>
+</div>
 
 <script src="assets/main.js"></script>
 </body>
